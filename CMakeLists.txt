@@ -49,6 +49,7 @@ function(exec name)
     gflags::gflags_shared
     Person
     Utility
+    termcolor::termcolor
   )
   target_compile_options(${name} PUBLIC -fno-rtti)
 endfunction()

@@ -6,6 +6,7 @@
 #include <ProgressBar.hpp>
 
 #include <dbg.h>
+#include <termcolor/termcolor.hpp>
 
 #include <llvm/Support/CommandLine.h>
 
@@ -19,6 +20,7 @@ int main(int argc, char **argv) {
     llvm::cl::PrintOptionValues();
   }
 
+  std::cout << termcolor::bold << termcolor::yellow;
   ProgressBar Bar;
   Bar.setBarWidth(50);
   Bar.fillBarProgressWith("■");
@@ -28,6 +30,7 @@ int main(int argc, char **argv) {
     Bar.update(I);
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
   }
+
   std::cout << termcolor::reset;
   return 0;
 }
