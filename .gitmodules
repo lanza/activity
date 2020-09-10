@@ -1,9 +1,6 @@
 [submodule "utils/termcolor"]
 	path = utils/termcolor
 	url = https://github.com/ikalnytskyi/termcolor
-[submodule "utils/dbg-macro"]
-	path = utils/dbg-macro
-	url = https://github.com/sharkdp/dbg-macro
 [submodule "utils/googletest"]
 	path = utils/googletest
 	url = https://github.com/google/googletest
