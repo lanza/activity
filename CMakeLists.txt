@@ -22,10 +22,6 @@ find_package(LLVM REQUIRED)
 find_package(ZLIB REQUIRED)
 include_directories(${LLVM_INCLUDE_DIRS})
 
-find_package(glog REQUIRED)
-set(GFLAGS_USE_TARGET_NAMESPACE ON)
-find_package(gflags REQUIRED)
-
 include_directories(include)
 add_subdirectory(include)
 
@@ -45,8 +41,6 @@ function(exec name)
     LLVMSupport
     LLVMCore
     dbg_macro
-    glog::glog
-    gflags::gflags_shared
     Person
     Utility
     termcolor::termcolor
