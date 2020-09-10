@@ -4,3 +4,6 @@
 [submodule "utils/googletest"]
 	path = utils/googletest
 	url = https://github.com/google/googletest
+[submodule "utils/dbg-macro"]
+	path = utils/dbg-macro
+	url = https://github.com/sharkdp/dbg-macro
