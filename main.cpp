@@ -1,10 +1,11 @@
 #include <iostream>
+#include <string>
 #include <thread>
 
+#include <MultiProgress.h>
 #include <Person.hpp>
-#include <Utility.hpp>
 #include <ProgressBar.hpp>
-#include <MultiProgress.hpp>
+#include <Utility.hpp>
 
 #include <dbg.h>
 #include <termcolor/termcolor.hpp>
@@ -20,6 +21,8 @@ int main(int argc, char **argv) {
   if (!llvm::cl::ParseCommandLineOptions(argc, argv)) {
     llvm::cl::PrintOptionValues();
   }
+
+  std::cout << "Muffin\n";
 
   std::cout << termcolor::bold << termcolor::green << "\n\n" << std::endl;
   ProgressBar Bar1;

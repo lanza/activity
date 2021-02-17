@@ -13,7 +13,7 @@ template <typename Indicator, size_t Count> class MultiProgress {
 public:
   template <typename... Indicators, typename = typename std::enable_if_t<
                                         (sizeof...(Indicators) == Count)>>
-  explicit MultiProgress(Indicators &... Bars) : Bars({Bars...}) {}
+  explicit MultiProgress(Indicators &...Bars) : Bars({Bars...}) {}
 
   template <size_t Index>
   typename std::enable_if_t<(Index >= 0 && Index < Count), void>
